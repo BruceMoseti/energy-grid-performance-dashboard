@@ -9,7 +9,7 @@ from datetime import UTC, datetime, timedelta
 
 from gridpulse.config import REGIONS, get_settings
 from gridpulse.db import get_sessionmaker, init_db
-from gridpulse.pipeline.fetch_eia import fetch_region_data
+from gridpulse.pipeline.fetch_eia import EIAError, fetch_region_data
 from gridpulse.pipeline.load import upsert_grid_load
 from gridpulse.pipeline.transform import to_grid_load_frame
 from gridpulse.pipeline.validate import validate_records
@@ -54,7 +54,11 @@ def main(argv: list[str] | None = None) -> None:
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
     init_db()
-    ingest(args.hours)
+    try:
+        ingest(args.hours)
+    except EIAError as error:
+        # Missing configuration is expected on a first run; a traceback adds nothing.
+        raise SystemExit(f"error: {error}") from None
 
 
 if __name__ == "__main__":
