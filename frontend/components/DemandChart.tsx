@@ -7,16 +7,31 @@ import type { HistoryPoint } from "@/lib/api";
 
 type PlotlyModule = typeof import("plotly.js-dist-min");
 
+const FONT_STACK = "ui-sans-serif, system-ui, sans-serif";
+
 const LAYOUT: Partial<Layout> = {
   autosize: true,
-  paper_bgcolor: "transparent",
-  plot_bgcolor: "transparent",
+  // Matching --panel rather than staying transparent, because Plotly derives
+  // the hover spikeline's contrast colour from the paper background.
+  paper_bgcolor: "#0c1322",
+  plot_bgcolor: "#0c1322",
   // Plotly writes this straight into SVG attributes, so it needs a real stack.
-  font: { color: "#7f8ea9", family: "ui-sans-serif, system-ui, sans-serif", size: 12 },
+  font: { color: "#7f8ea9", family: FONT_STACK, size: 12 },
   margin: { l: 60, r: 20, t: 10, b: 44 },
   hovermode: "x unified",
+  hoverlabel: {
+    bgcolor: "#101a2d",
+    bordercolor: "#1b2740",
+    font: { color: "#e4ebf7", family: FONT_STACK, size: 12 },
+  },
   legend: { orientation: "h", x: 0, y: 1.18, bgcolor: "transparent" },
-  xaxis: { gridcolor: "#16203a", zeroline: false },
+  xaxis: {
+    gridcolor: "#16203a",
+    zeroline: false,
+    spikecolor: "#38bdf8",
+    spikethickness: 1,
+    spikedash: "dot",
+  },
   yaxis: {
     gridcolor: "#16203a",
     zeroline: false,

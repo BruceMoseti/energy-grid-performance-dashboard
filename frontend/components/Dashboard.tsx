@@ -195,9 +195,6 @@ export default function Dashboard() {
                   ? "demand rising"
                   : "demand falling"
               }
-              tone={
-                current.ramp_mw !== null && current.ramp_mw >= 0 ? "warn" : "good"
-              }
             />
             <Kpi
               label="Load factor"
