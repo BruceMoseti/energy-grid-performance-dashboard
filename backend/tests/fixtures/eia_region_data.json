@@ -1,0 +1,101 @@
+{
+  "response": {
+    "total": "10",
+    "dateFormat": "YYYY-MM-DD\"T\"HH24",
+    "frequency": "hourly",
+    "description": "Hourly demand, day-ahead demand forecast, net generation and total interchange by balancing authority.",
+    "data": [
+      {
+        "period": "2026-08-27T14",
+        "respondent": "PJM",
+        "respondent-name": "PJM Interconnection, LLC",
+        "type": "D",
+        "type-name": "Demand",
+        "value": "142821",
+        "value-units": "megawatthours"
+      },
+      {
+        "period": "2026-08-27T14",
+        "respondent": "PJM",
+        "respondent-name": "PJM Interconnection, LLC",
+        "type": "DF",
+        "type-name": "Day-ahead demand forecast",
+        "value": "143500",
+        "value-units": "megawatthours"
+      },
+      {
+        "period": "2026-08-27T14",
+        "respondent": "PJM",
+        "respondent-name": "PJM Interconnection, LLC",
+        "type": "NG",
+        "type-name": "Net generation",
+        "value": "140331",
+        "value-units": "megawatthours"
+      },
+      {
+        "period": "2026-08-27T14",
+        "respondent": "PJM",
+        "respondent-name": "PJM Interconnection, LLC",
+        "type": "TI",
+        "type-name": "Total interchange",
+        "value": "-2490",
+        "value-units": "megawatthours"
+      },
+      {
+        "period": "2026-08-27T15",
+        "respondent": "PJM",
+        "respondent-name": "PJM Interconnection, LLC",
+        "type": "D",
+        "type-name": "Demand",
+        "value": "145103",
+        "value-units": "megawatthours"
+      },
+      {
+        "period": "2026-08-27T15",
+        "respondent": "PJM",
+        "respondent-name": "PJM Interconnection, LLC",
+        "type": "DF",
+        "type-name": "Day-ahead demand forecast",
+        "value": "145800",
+        "value-units": "megawatthours"
+      },
+      {
+        "period": "2026-08-27T15",
+        "respondent": "PJM",
+        "respondent-name": "PJM Interconnection, LLC",
+        "type": "NG",
+        "type-name": "Net generation",
+        "value": "142010",
+        "value-units": "megawatthours"
+      },
+      {
+        "period": "2026-08-27T15",
+        "respondent": "PJM",
+        "respondent-name": "PJM Interconnection, LLC",
+        "type": "TI",
+        "type-name": "Total interchange",
+        "value": "-3093",
+        "value-units": "megawatthours"
+      },
+      {
+        "period": "2026-08-27T14",
+        "respondent": "CISO",
+        "respondent-name": "California Independent System Operator",
+        "type": "D",
+        "type-name": "Demand",
+        "value": "38210",
+        "value-units": "megawatthours"
+      },
+      {
+        "period": "2026-08-27T14",
+        "respondent": "CISO",
+        "respondent-name": "California Independent System Operator",
+        "type": "DF",
+        "type-name": "Day-ahead demand forecast",
+        "value": null,
+        "value-units": "megawatthours"
+      }
+    ]
+  },
+  "apiVersion": "2.1.8"
+}
